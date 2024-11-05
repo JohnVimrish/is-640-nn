@@ -1,3 +1,4 @@
+import math 
 
 class Value:
     """ stores a single scalar value and its gradient """
@@ -89,6 +90,12 @@ class Value:
 
     def __rtruediv__(self, other): # other / self
         return other * self**-1
+    
+    def __rsqr__(self, other): # other + self
+        return self**other
+
+    def __rmultiplysqrt__(self, other): # self - other
+        return math.sqrt(self *other)
 
     def __repr__(self):
         return f"Value(data={self.data}, grad={self.grad})"
