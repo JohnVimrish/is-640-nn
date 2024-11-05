@@ -7,7 +7,7 @@ print(n(x))
 xs = [[3.0,-1.0,2.5],[2.0, 0.8,-1.3],[-1.5,0.5,2.3],[3.5,6.9,-0.3]]
 ys  = [1.0,-4.0,-1.0,1.0]
 
-for k in range (20) :
+for k in range (5) :
     ypredictability = [n(x) for x in xs ]
     loss =   sum([(yout-yin)**2 for  yout ,yin in zip(ys,ypredictability)])
 
